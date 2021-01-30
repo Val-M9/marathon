@@ -1,6 +1,6 @@
 import styles from "./layout.module.css";
 
-const Layout = ({ id, title, desc, urlBg, colorBg }) => {
+const Layout = ({ id, title, urlBg, colorBg, children }) => {
   return (
     <section
       className={styles.root}
@@ -17,9 +17,7 @@ const Layout = ({ id, title, desc, urlBg, colorBg }) => {
             <h3>{title}</h3>
             <span className={styles.separator}></span>
           </div>
-          <div className={`${styles.desc}${styles.full}`}>
-            <p>{desc}</p>
-          </div>
+          <div className={`${styles.desc} ${styles.full}`}>{children}</div>
         </article>
       </div>
     </section>
